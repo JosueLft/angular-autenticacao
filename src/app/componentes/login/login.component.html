@@ -1,0 +1,29 @@
+<h1 class="text-center">Login</h1>
+
+<form class="container panel" [formGroup]="form">
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control sm" id="email" placeholder="Digite seu email" formControlName="email">
+        <label for="email">Digite seu Email</label>
+        <span *ngIf="form.controls.email.touched && form.controls.email.errors?.required">
+            <i class="fas fa-bug"></i>
+            Email é obrigatório.
+        </span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control sm" id="senha" placeholder="Digite sua senha" formControlName="senha">
+        <label for="senha">Digite sua senha</label>
+        <span *ngIf="form.controls.senha.touched && form.controls.senha.errors?.required">
+            <i class="fas fa-bug"></i>
+            Senha é obrigatório.
+        </span>
+        <span *ngIf="form.controls.senha.touched && form.controls.senha.errors?.minlength">
+            <i class="fas fa-bug"></i>
+            A senha deve conter pelo menos 6 caracteres
+        </span>
+    </div>
+    
+    <div class="text-center">
+        <button type="submit" class="btn btn-sm btn-dark edit" (click)="logar()" [disabled]="form.invalid"><i class="fas fa-sign-in-alt"></i> Login</button>
+    </div>
+</form>
