@@ -6,3 +6,7 @@
 tr:hover {
     color: white;
 }
+
+.dataHora {
+    float: right;
+}
