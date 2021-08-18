@@ -17,9 +17,9 @@ export class LancamentosComponent implements OnInit, OnDestroy {
   dataHoraAtualSub: Subscription | undefined;
   dataTempoRealSub: Subscription | undefined;
 
-
   constructor(private lancamentoService: LancamentoService,
               private dataHoraService: DataHoraService) { }
+
   ngOnDestroy(): void {
     this.dataHoraAtualSub?.unsubscribe();
     this.dataTempoRealSub?.unsubscribe();
@@ -44,6 +44,10 @@ export class LancamentosComponent implements OnInit, OnDestroy {
 
   atualizarDataHora() {
     this.dataHoraService.atualizarDataHora();
+  }
+
+  downloadCSV() {
+    this.lancamentoService.downloadCSV(this.lancamentos);
   }
 
 }
