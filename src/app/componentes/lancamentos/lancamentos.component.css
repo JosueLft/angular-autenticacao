@@ -10,3 +10,9 @@ tr:hover {
 .dataHora {
     float: right;
 }
+
+.divider {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black
+}
