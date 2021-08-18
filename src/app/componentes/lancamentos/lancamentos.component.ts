@@ -50,4 +50,8 @@ export class LancamentosComponent implements OnInit, OnDestroy {
     this.lancamentoService.downloadCSV(this.lancamentos);
   }
 
+  downloadPDF() {
+    this.lancamentoService.downloadPDF(this.lancamentos);
+  }
+
 }

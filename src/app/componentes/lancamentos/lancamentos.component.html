@@ -5,13 +5,13 @@
 <p class="dataHora">
   <i class="far fa-calendar-alt"></i> {{ dataTempoReal }}
 </p>
-<h2>lançamentos</h2>
+<h2 class="container">lançamentos</h2>
 <hr class="divider">
-<div class="d-grid">
-  <button type="button" class="btn btn-dark btn-sm btn-outline-success" (click)="downloadCSV()"><i class="fas fa-file-csv"></i></button>
+<div class="gap-4 row container">
+  <button type="button" class="btn btn-dark btn-sm btn-outline-success col-3" (click)="downloadCSV()"><i class="fas fa-file-csv"></i></button>
+  <button class="btn btn-dark btn-sm btn-outline-success col-3" type="button" (click)="downloadPDF()"><i class="far fa-file-pdf"></i></button>
 </div>
 <hr class="divider">
-
 
 <div class="container">
   <div>
